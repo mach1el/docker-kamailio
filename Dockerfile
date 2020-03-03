@@ -14,7 +14,6 @@ RUN apt-get update && apt-get install -yqq net-tools kamailio kamailio-autheph-m
 
 EXPOSE 5060/udp
 
-COPY kamailio /etc/default/
 COPY kamailio.cfg /etc/kamailio/
 RUN touch /var/log/kamailio.log
 RUN echo "local0.*              -/var/log/kamailio.log" >> /etc/rsyslog.conf
