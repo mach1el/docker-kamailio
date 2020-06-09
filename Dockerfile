@@ -1,9 +1,9 @@
-FROM debian:buster
+FROM debian:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -qq && apt-get install -y --no-install-recommends git curl wget \
-    ca-certificates gnupg2 dirmngr && rm -rf /var/lib/apt/lists
+    ca-certificates gnupg dirmngr && rm -rf /var/lib/apt/lists
 
 RUN apt-get update && apt-get install -yqq net-tools kamailio kamailio-autheph-modules \ 
 	kamailio-berkeley-bin kamailio-berkeley-modules kamailio-json-modules kamailio-mysql-modules \ 
@@ -15,8 +15,6 @@ RUN apt-get update && apt-get install -yqq net-tools kamailio kamailio-autheph-m
 EXPOSE 5060/udp
 
 COPY kamailio.cfg /etc/kamailio/
-RUN touch /var/log/kamailio.log
-RUN echo "local0.*              -/var/log/kamailio.log" >> /etc/rsyslog.conf
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
