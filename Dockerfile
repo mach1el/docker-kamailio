@@ -47,6 +47,4 @@ COPY entrypoint.sh /entrypoint.sh
 
 EXPOSE 5060/udp
 
-VOLUME "/etc/kamailio"
-
 ENTRYPOINT ["/entrypoint.sh"]
