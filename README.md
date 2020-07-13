@@ -32,4 +32,4 @@ Build and run kamailio on docker
 
 ### Notes
 
-This using default its scripting,to use your custom scripting just `mount` to your path
+This using default its scripting,to use your custom scripting just `mount` */etc/kamailio* to your path
