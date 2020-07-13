@@ -1,6 +1,6 @@
 # Kamailio on docker 
 ![ver](https://img.shields.io/github/v/release/mach1el/docker-kamailio?color=red&style=plastic)
-![License](https://img.shields.io/github/license/mach1el/kamailio-docker?color=yellow&style=plastic)
+![License](https://img.shields.io/github/license/mach1el/docker-kamailio?color=yellow&style=plastic)
 ![docker](https://img.shields.io/badge/docker-container-violet)
 
 Build and run kamailio on docker
