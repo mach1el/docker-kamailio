@@ -29,3 +29,7 @@ Build and run kamailio on docker
 	--name=kamailio \
 	-v /etc/kamailio:/etc/kamailio \
 	mich43l/kamailio 
+
+### Notes
+
+This using default its scripting,to use your custom scripting just `mount` to your path
