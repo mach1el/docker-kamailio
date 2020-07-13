@@ -1,15 +1,31 @@
 # Kamailio on docker 
-Simple build kamailio on docker
-
-![ver](https://img.shields.io/badge/kamailio-5.2-critical)
+![ver](https://img.shields.io/github/v/release/mach1el/docker-kamailio?color=red&style=plastic)
+![License](https://img.shields.io/github/license/mach1el/kamailio-docker?color=yellow&style=plastic)
 ![docker](https://img.shields.io/badge/docker-container-violet)
 
-### Build
-	git clone https://github.com/t7hm1/kamailio-docker.git && cd kamailio-docker
+Build and run kamailio on docker
+
+### Pull from hub
+	docker pull mich43l/kamailio
+
+### Build from source
+	git clone https://github.com/mach1el/kamailio-docker.git && cd kamailio-docker
 	docker image build -t kamailio_docker .
 	
-### Run
-*	docker run -tid --rm --network=host --name=kamailio kamailio_docker
+### Run from local
+*	docker run \
+	-tid \
+	--rm \
+	--network=host \
+	--name=kamailio \
+	-v /etc/kamailio:/etc/kamailio \
+	kamailio_docker 
 
-## License
-![License](https://img.shields.io/github/license/t7hm1/kamailio-docker?color=yellow&style=for-the-badge)
+### Run from hub
+* docker run \
+	-tid \
+	--rm \
+	--network=host \
+	--name=kamailio \
+	-v /etc/kamailio:/etc/kamailio \
+	mich43l/kamailio 
