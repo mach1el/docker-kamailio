@@ -9,8 +9,8 @@ Build and run kamailio on docker
 	docker pull mich43l/kamailio
 
 ### Build from source
-	git clone https://github.com/mach1el/kamailio-docker.git && cd kamailio-docker
-	docker image build -t kamailio_docker .
+	git clone https://github.com/mach1el/docker-kamailio.git && cd docker-kamailio
+	docker image build -t kamailio .
 	
 ### Run from local
 *	docker run \
@@ -19,7 +19,7 @@ Build and run kamailio on docker
 	--network=host \
 	--name=kamailio \
 	-v /etc/kamailio:/etc/kamailio \
-	kamailio_docker 
+	kamailio 
 
 ### Run from hub
 * docker run \
