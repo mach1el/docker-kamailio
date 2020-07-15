@@ -1,7 +1,8 @@
 # Kamailio on docker 
 ![ver](https://img.shields.io/github/v/release/mach1el/docker-kamailio?color=red&style=plastic)
 ![License](https://img.shields.io/github/license/mach1el/docker-kamailio?color=yellow&style=plastic)
-![docker](https://img.shields.io/badge/docker-container-violet)
+![reposize](https://img.shields.io/github/repo-size/mach1el/docker-kamailio?color=orange&style=plastic)
+![dockerbuild](https://img.shields.io/docker/automated/mich43l/kamailio?style=plastic)
 
 Build and run kamailio on docker
 
@@ -13,23 +14,10 @@ Build and run kamailio on docker
 	docker image build -t kamailio .
 	
 ### Run from local
-*	docker run \
-	-tid \
-	--rm \
-	--network=host \
-	--name=kamailio \
-	-v /etc/kamailio:/etc/kamailio \
-	kamailio 
+*	docker run -tid --rm --network=host --name=kamailio -v /etc/kamailio:/etc/kamailio kamailio 
 
 ### Run from hub
-* docker run \
-	-tid \
-	--rm \
-	--network=host \
-	--name=kamailio \
-	-v /etc/kamailio:/etc/kamailio \
-	mich43l/kamailio 
+* docker run -tid --rm --network=host --name=kamailio -v /etc/kamailio:/etc/kamailio mich43l/kamailio 
 
 ### Notes
-
 This using default its scripting,to use your custom scripting just `mount` */etc/kamailio* to your path
