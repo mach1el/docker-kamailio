@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:buster
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV KAMAILIO_CFG_PATH /etc/kamailio/kamailio.cfg
